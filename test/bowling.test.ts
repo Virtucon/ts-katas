@@ -29,6 +29,7 @@ describe("Bowling scenarios", () => {
   });
 
   it ("should score 16 with a spare followed by a 3 ball", () => {
+    // When scoring a spare, points for the next ball are doubled.
     bowlingGame.roll(9);
     bowlingGame.roll(1);
     bowlingGame.roll(3);
