@@ -40,4 +40,12 @@ describe("Bowling scenarios", () => {
     }
     expect(game.score()).toBe(0);
   });
+
+  it("should score 20 when bowling all ones", () => {
+    const game: BowlingKata = new BowlingKata();
+    for (let i = 0; i < 20; i++) {
+      game.roll(1);
+    }
+    expect(game.score()).toBe(20);
+  });
 });
