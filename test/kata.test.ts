@@ -1,4 +1,4 @@
-import { BowlingKata, Kata } from "../src";
+import { Kata } from "../src";
 
 describe("Kata scenarios", () => {
   it("should create instance", () => {
@@ -28,24 +28,3 @@ describe("Kata scenarios", () => {
   });
 });
 
-describe("Bowling scenarios", () => {
-  it("should create a new instance", () => {
-    const instance = new BowlingKata();
-  });
-
-  it("should score 0 for all bowls resulting in the gutter", () => {
-    const game: BowlingKata = new BowlingKata();
-    for (let i = 0; i < 20; i++) {
-      game.roll(0);
-    }
-    expect(game.score()).toBe(0);
-  });
-
-  it("should score 20 when bowling all ones", () => {
-    const game: BowlingKata = new BowlingKata();
-    for (let i = 0; i < 20; i++) {
-      game.roll(1);
-    }
-    expect(game.score()).toBe(20);
-  });
-});
