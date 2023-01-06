@@ -27,4 +27,11 @@ describe("Bowling scenarios", () => {
     bowlMany(20, 1);
     expect(bowlingGame.score()).toBe(20);
   });
+
+  it ("should score 16 with a spare followed by a 3 ball", () => {
+    bowlingGame.roll(9);
+    bowlingGame.roll(1);
+    bowlingGame.roll(3);
+    expect(bowlingGame.score()).toBe(16);
+  })
 });
