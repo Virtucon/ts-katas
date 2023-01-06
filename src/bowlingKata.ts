@@ -1,7 +1,11 @@
 export class BowlingKata {
-  roll(pins: number): void {}
+  private _score: number = 0;
+
+  roll(pins: number): void {
+    this._score += pins;
+  }
 
   score(): number {
-    return 0;
+    return this._score;
   }
 }
